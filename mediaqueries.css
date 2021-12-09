@@ -1,0 +1,20 @@
+.div1 , .div2 , .div3{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    float: left;
+    margin: 20px;
+    border-radius: 50%;
+     
+}
+.bp{
+    color: purple;
+}
+
+@media screen and (max-width:768px) {
+    .div1 , .div2 , .div3 , .bp{
+        background-color: black;
+        width: 95%;
+        height: 100%;
+    }
+}
