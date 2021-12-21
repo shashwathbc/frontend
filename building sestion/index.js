@@ -25,3 +25,5 @@ if(op==="-"){
 }
 
 }
+
+button.addEventListener("click",calculate)
