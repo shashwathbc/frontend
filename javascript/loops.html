@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+
+// Different Kinds of Loops
+// JavaScript supports different kinds of loops:
+
+// for - loops through a block of code a number of times
+// for/in - loops through the properties of an object
+// for/of - loops through the values of an iterable object
+// while - loops through a block of code while a specified condition is true
+// do/while - also loops through a block of code while a specified condition is true
+
+
+
+
         //for
 
         // for(let i=0;i<10;i++){
@@ -30,15 +43,157 @@
         // }
 
 
-        //break
-        //continue
+//         The Break Statement
+
+// You have already seen the break statement used in an earlier chapter of this tutorial. 
+// It was used to "jump out" of a switch() statement.
+
+// The break statement can also be used to jump out of a loop:
+
+// Example
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) { break; }
+//   text += "The number is " + i + "<br>";
+// }
+// In the example above, the break statement ends the loop ("breaks" the loop) when the loop counter (i) is 3.
+
+
+
+// The Continue Statement
+
+// The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+// This example skips the value of 3:
+
+// Example
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) { continue; }
+//   text += "The number is " + i + "<br>";
+// }
+
         //switch
+
+//         The JavaScript Switch Statement
+// Use the switch statement to select one of many code blocks to be executed.
+
+// Syntax
+// switch(expression) {
+//   case x:
+//     // code block
+//     break;
+//   case y:
+//     // code block
+//     break;
+//   default:
+//     // code block
+// }
+// This is how it works:
+
+// The switch expression is evaluated once.
+// The value of the expression is compared with the values of each case.
+// If there is a match, the associated block of code is executed.
+// If there is no match, the default code block is executed.
+// Example
+// The getDay() method returns the weekday as a number between 0 and 6.
+
+// (Sunday=0, Monday=1, Tuesday=2 ..)
+
+// This example uses the weekday number to calculate the weekday name:
+
+// switch (new Date().getDay()) {
+//   case 0:
+//     day = "Sunday";
+//     break;
+//   case 1:
+//     day = "Monday";
+//     break;
+//   case 2:
+//      day = "Tuesday";
+//     break;
+//   case 3:
+//     day = "Wednesday";
+//     break;
+//   case 4:
+//     day = "Thursday";
+//     break;
+//   case 5:
+//     day = "Friday";
+//     break;
+//   case 6:
+//     day = "Saturday";
+// }
+// The result of day will be:
+
+// Thursday
+
+
 
         //array
 
+
+//         Why Using an Array?
+// If you have a list of items (a list of car names, for example),
+//  storing the cars in single variables could look like this:
+
+// let car1 = "Saab";
+// let car2 = "Volvo";
+// let car3 = "BMW";
+// However, what if you want to loop through the cars and find a specific one? 
+//And what if you had not 3 cars, but 300?
+
+// The solution is an array!
+
+// An array can hold many values under a single name, and you can access the
+ //values by referring to an index number.
+
+// Creating an Array
+// Using an array literal is the easiest way to create a JavaScript Array.
+
+// Syntax:
+
+// const array_name = [item1, item2, ...];      
+// It is a common practice to declare arrays with the const keyword.
+
+// Learn more about const with arrays in the chapter: JS Array Const.
+
+// Example
+// const cars = ["Saab", "Volvo", "BMW"];
+// Spaces and line breaks are not important. A declaration can span multiple lines:
+
+// Example
+// const cars = [
+//   "Saab",
+//   "Volvo",
+//   "BMW"
+// ];
+
         //strings
+//         JavaScript String Methods
+// String methods help you to work with strings.
+
+// String Methods and Properties
+// Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).
+
+// But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.
+
+// JavaScript String Length
+// The length property returns the length of a string:
+
+// Example
+// let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// let length = txt.length;
+
+         //left shift
+//          Left shift (<<)
+// The left shift operator (<<) shifts the first operand the specified number of bits to the left. 
+// Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right.
 
 
+         //right shift
+//          Right shift (>>)
+// The right shift operator (>>) shifts the first operand the specified number of bits to the right.
+//  Excess bits shifted off to the right are discarded. Copies of the leftmost bit are shifted in from the left. Since the new leftmost bit has the same value as the previous leftmost
+//  bit, the sign bit (the leftmost bit) does not change. Hence the name "sign-propagating".
 
     </script>
 </head>

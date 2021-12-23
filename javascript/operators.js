@@ -56,7 +56,8 @@ console.log(x<y);
 // 1 & 0 = 0
 // 1 & 1 = 1
 
-
+// let y= new String("shashwath")
+// console.log(y);
 
 
 
