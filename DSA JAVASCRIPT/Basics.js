@@ -140,7 +140,97 @@ myStr += "This is the second sentence.";
 const myName = "Shashwath";
 const myStr = "My name is" + myName + ",and I am well!";
 
+
+// ********************************************************************************************
 //Appending Variables to Strings:
+const someAdjective = "shash";
+let myStr = "Learning to code is ";
+myStr += someAdjective;
+
+
+// ********************************************************************************************
+
+//Find the Length of a String:
+let lastNameLength = 0;
+const lastName = "Lovelace";
+lastNameLength = lastName;
+// output:
+// console.log(lastName.length);
+//          or
+lastNameLength = lastName.length;
+
+
+// ********************************************************************************************
+
+//Use Bracket Notation to Find the First Character in a String:
+let firstLetterOfLastName = "";
+const lastName = "Lovelace";
+
+// Only change code below this line
+firstLetterOfLastName = lastName[0];
+
+
+// ********************************************************************************************
+
+//Understand String Immutability
+//In JavaScript, String values are immutable, which means that they cannot be altered once created.
+// For example, the following code:
+
+// let myStr = "Bob";
+// myStr[0] = "J";
+// cannot change the value of myStr to Job, 
+// because the contents of myStr cannot be altered.
+//  Note that this does not mean that myStr cannot be changed, 
+//  just that the individual characters of a string literal cannot be changed.
+//   The only way to change myStr would be to assign it with a new string, like this:
+
+// let myStr = "Bob";
+// myStr = "Job";
+
+
+
+// ********************************************************************************************
+//Use Bracket Notation to Find the Nth Character in a String:
+const lastName = "Lovelace";
+
+// Only change code below this line
+const thirdLetterOfLastName = lastName[2];
+
+
+// ********************************************************************************************
+// Use Bracket Notation to Find the Last Character in a String:
+
+// const firstName = "Ada";
+// const lastLetter = firstName[firstName.length - 1];
+// lastLetter would have a value of the string a.
+
+//Use Bracket Notation to Find the Nth-to-Last Character in a String:
+// const firstName = "Augusta";
+// const thirdToLastLetter = firstName[firstName.length - 3];
+// thirdToLastLetter would have a value of the string s.
+
+
+
+// ********************************************************************************************
+
+//Word Blanks:
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+
+// Only change code below this line
+const wordBlanks = "The " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + ".";
+
+
+
+
+
+
+
+
+
+
 
 
 
