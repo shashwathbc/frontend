@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          let shash = {
+        batch : "batch 11",
+        cource: "bca",
+        place : "india",
+        friends: ["shas" , "shaaa", "shash"]
+    }
+    // return the key value pair as elements in the form of an array   .entries , .keys , .values.
+    console.log(Object.entries(shash));
+
+
+    // for of: used for iterating only arrays
+       for (x of shash.friends){
+           console.log(x);
+       }
+
+    // for in:  goes through/ prints  all the keys and values in console (only iterate objects)
+    for (x in shash){
+        console.log(x + ":" + shash[x]);
+    }
+
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

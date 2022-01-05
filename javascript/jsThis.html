@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // creating functions for obj / also called methods:
+    //  let shash = {
+    //     batch : "batch 11",
+    //     place : "india",
+    //     friends: ["shas" , "shaaa", "shash"],
+    //     // hi: function (){
+    //     //     console.log("hi");
+    //     // }
+    //     hi: (name) => {
+    //         console.log("Hi " + name)
+    //     }
+    // }
+
+    // shash.hi("shash");
+
+//**************************************************************************
+// this : always refers to the owner of that specific methods.
+    let shivu = {
+        firstName: "shiva",
+        lastName: "dd",
+        noOfHoursInvestedInJs: 3,
+        noOfHoursInvestedIncss: 2,
+        display: function()  {
+            console.log(this.firstName +' ' + this.lastName)
+        }
+    }
+
+    // arrow func is not hoisted , this keyword does not work/ use .
+
+    let goverdan = {
+        firstName: "goverdan",
+        lastName: "dd",
+        noOfHoursInvestedInJs: 5,
+        noOfHoursInvestedIncss: 7,
+        display: (firstName , lastName) => {
+            console.log(this.firstName +' ' + this.lastName)
+        }
+    }
+    shivu.display();
+
+
+     let shashwath = {
+         name: "shash",
+         skill: "web dev",
+         numbers: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+         prime: function(num){
+            let count = 0;
+      for(let i=1;i<=num;i++){
+          if(num%i===0){
+              count++;
+          }
+          if(count>2){
+              return false 
+          }
+
+      }
+      if(count===2){
+          return true;
+      }
+         }
+
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    // properties={batch , place , friens} and methods{xyz- anonamous fucn, arrow fun any..} :
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Prime(true),Composite(false).</p> 
+ 
+<p id="demo"></p> 
+ 
+<script> 
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]; 
+var text = ""; 
+var i; 
+var number; 
+ 
+for (i = 0; i < numbers.length; i++) { 
+  
+ number = numbers[i]*1; 
+ text += "The number " + number + " is " + isPrime(number) + "<br>"; 
+ 
+} 
+document.getElementById("demo").innerHTML = text; 
+ 
+ 
+ 
+function isPrime(number) { 
+    var start = 2; 
+    while (start <= Math.sqrt(number)) { 
+        if (number % start++ < 1) return false; 
+    } 
+    return number > 1; 
+} 
+</script> 
+</body>
+</html> -->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+ let shashwath = {
+    name: "shash",
+    skill: "web dev",
+    num : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    prime : function(){
+          for(let i=0; i<this.num.length; i++){
+          var x = this.num[i];
+          var div = 2;
+          var check = true;
+          while(div<x){
+              if(x %div===0){
+                  check = false;
+                  break;
+              }else{
+                  div++;
+              }
+          }
+          if(check){
+          document.write(x+" ");
+        }
+
+
+        }
+    }
+
+}
+
+shashwath.prime();
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
