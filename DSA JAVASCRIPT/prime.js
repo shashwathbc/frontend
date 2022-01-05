@@ -15,3 +15,21 @@ function prime (num){
 }
 
 console.log(prime(3));
+
+
+
+
+
+//O( \sqrt{n}
+function isprime(n){
+    const boundary = Math.floor(Math.sqrt(n))
+    for(let i=2;i<=boundary;i++){
+        if(num%i==0)
+        return false
+    }
+    if(n<2)
+    return false
+    return true
+}
+
+console.log(isprime(1));

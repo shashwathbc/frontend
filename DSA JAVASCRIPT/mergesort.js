@@ -1,3 +1,4 @@
+// time complexity  n log n;
 function merge(n,left,mid,right){
     var n1 = mid-left+1;
     var n2 = right - mid;
