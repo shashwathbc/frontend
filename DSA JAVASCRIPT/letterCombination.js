@@ -1,3 +1,7 @@
+// time complex: using permutation:0(4^n)
+
+// 
+
 function letterCombinations(A) {
  const phone = {
      "0": "0",
@@ -15,7 +19,7 @@ function letterCombinations(A) {
  let len = A.length;
  let ans = [];
 
- if(!len)
+ if(!len)    // len==0;
     return ans;
  
  
