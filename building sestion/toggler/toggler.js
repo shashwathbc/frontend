@@ -4,6 +4,7 @@ const cheap = document.querySelector("#cheap");
 const fast = document.querySelector("#fast");
 
 toggles.forEach((toggle)=>toggle.addEventListener("change",(e)=>{
+    console.log(e);
     console.log(e.target)
     transitionFunc(e.target)
 }))

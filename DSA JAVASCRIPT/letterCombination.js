@@ -42,4 +42,4 @@ function letterCombinations(A) {
 }
 
 
-console.log(letterCombinations("2406"));
+console.log(letterCombinations("23"));
