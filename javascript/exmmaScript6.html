@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+   // 1) template string: used instead of using those old style of "hf"+  +"hfj"..
+
+   let name = 'shash'
+   console.log(`${name} is a good `);
+
+
+   // 2)  let and const 
+
+//    let name = 'shash'   : scope 
+//    const name = 'shash' : constant cannot change
+
+//     3)  arrow function:
+// function abc(){
+//     console.log(abc)
+// }
+//or use arrow func instead:
+let abc = ()  =>  console.log("abc")
+
+
+
+// 4)  default parameters:
+// function abc(a , b){
+//     console.log(a+b)
+// }   
+
+// abc()
+// we get NaN
+
+
+// 5) multi line string:
+let greeting = `Hello World,     
+                Greetings to all,
+                Keep Learning and Practicing!`
+
+
+console.log(greeting)
+
+
+// 6) exponential operators:
+
+let a = 3** 2
+console.log(a)
+
+
+// 7) spread Operator:  used to store or concat arrays.
+
+let numberStore = [0, 1, 2];
+let newNumber = 12;
+numberStore = [...numberStore, newNumber];
+
+
+console.log(numberStore)
+
+
+//or
+
+let a1 =[1,2,3]
+let a2 = [4,5]
+let a3 =[...a1, ...a2]
+console.log(a3)
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

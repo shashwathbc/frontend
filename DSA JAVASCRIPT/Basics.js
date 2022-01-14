@@ -189,6 +189,9 @@ firstLetterOfLastName = lastName[0];
 
 
 
+
+
+
 // ********************************************************************************************
 //Use Bracket Notation to Find the Nth Character in a String:
 const lastName = "Lovelace";
