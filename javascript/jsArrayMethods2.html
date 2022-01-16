@@ -235,6 +235,30 @@
 // console.log(sum)
 
 
+// to find min number in an array:
+// or use infinity
+let arr = [3,1,5,2,6]
+
+let min = arr.reduce((temporaryMin,element) => {
+    if(element< temporaryMin)
+        return element
+        else
+        return temporaryMin
+
+},10)
+console.log(min)
+
+//to find max number in an array:
+//or use infinity
+let arr2 = [3,1,5,2,6]
+let max = arr2.reduce((temporaryMax,element) => {
+    if(element> temporaryMax)
+        return element
+        else
+        return temporaryMax
+
+},0)
+console.log(max)
 
 
 
@@ -298,7 +322,8 @@
 
 
 //reduce:
-// reduce() method in JavaScript is used to reduce the array to a single value and executes a provided function 
+// reduce() method in JavaScript is used to reduce the array to a single value and 
+//executes a provided function 
 // for eachvalue of the array (from left-to-right) and the return value of the function 
 // is stored in an accumulator.
 
