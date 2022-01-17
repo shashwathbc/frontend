@@ -52,7 +52,7 @@ let a = 3** 2
 console.log(a)
 
 
-// 7) spread Operator:  used to store or concat arrays.
+// 7) spread Operator:  used to store or concat arrays.  
 
 let numberStore = [0, 1, 2];
 let newNumber = 12;
@@ -87,19 +87,104 @@ let details2 ={
      details2.name ="secname"   
          console.log({...details})
 
+//or
 
 
 
- //   8) 
+
+ //   8) includes(): it checks if an char is present in an variable (true or false)
+
+ let x = "Hello World"
+ x.includes("h")
+
+
+
+ //9)  Object Property Assignment:
+
+ let firstName = "shashwath";
+ let lastName = "B C";
+
+
+let shash ={
+    firstName: firstName,
+    lastName: lastName,
+}
+
+console.log(shash);
+
+
+//or using Object Property Assignment if var and key are same then no need to use
+// let shash ={
+//     firstName: firstName,
+//     lastName: lastName,
+// }
+
+//use this : to display in console:
+// let shash ={
+//     firstName,
+//     lastName,
+// }
+
+
+
+// 10)    Object.assign(): used to do deep copy in objects:
+
+
+
+
+// 11)  Destructuring:   VVIMP:
+
+let sahsh ={
+    name: "shash",
+    batch: 11,
+
+}
+
+
+ console.log(sahsh.batch);
+//or :
+let batch = sahsh.batch;
+console.log(batch);
+
+
+//or desst:
+let {name , batch} = sahsh;
+
+
+
+
+// 12)   Object.entries()   :
+
+
+
+
+
+
+
+
 
 
 
 // ***************************************************************************************************************
 
+//(shallow copy)
+let obj= {
+    abc : "abc",
+    def: "def",
+}
+// let x = obj;
+// x.abc ="xyz";
+// console.log(obj);
+// or use spread operator to do deep copy
 
 
+// negative infinity and infinity:
 
 
+// swap no:
+let a = 1;
+let b = 2;
+[a, b] = [b, a];
 
 
 

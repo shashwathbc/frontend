@@ -670,6 +670,3 @@ if (condition1) {
 
 
 
-
-
-
