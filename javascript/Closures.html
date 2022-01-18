@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- closures:  -->
+     <!-- inner scope always has access to all variables in outer scope  -->
+     <!-- inner func will have have acces to alllt he var of outer scope  -->
+     
+    <script>
+// <!-- inner scope always has access to all variables in outer scope  -->
+        // let x =5;
+        // function abc(){
+        //     let y =10
+        //     {
+        //         console.log(x ,y);
+        //     }
+            
+        // }
+        // abc();
+
+
+        //and
+
+
+        // <!--   we can return string , array , object       -->
+
+    //     let x =5;
+    //     function abc(){
+    //         let y =10
+    //         {
+    //             console.log(x ,y);
+    //         }
+    //         return y;
+            
+    //     }
+    //   console.log(  abc());
+
+
+
+       // Higher order function :
+       //1) takes another function as arguments (callbacks)
+       //2)  returns a function 
+
+// local variable cannot be accessed outside 
+  
+//         function abc(){     // outer function
+//             let y =10;
+
+//             function def(){   // inner function
+//                  return y;
+//             }
+
+//    return def()
+           
+//         }
+//         console.log(y);
+//     //   abc();
+
+
+
+
+
+    //
+
+    function abc(){     // outer function
+            let y =10;
+
+          return   function (){   // inner function
+                 return y;
+            }
+           
+        }
+
+        console.log(abc()());    // 
+        //or
+        const innerFunction = abc();
+        console.log(innerFunction());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

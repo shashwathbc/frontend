@@ -70,7 +70,7 @@ small{
     text-align: center;
 }
 
-.todos li.comp{
+.todos li.completed{
     color: #b5b5b5;
     text-decoration: line-through;
 }

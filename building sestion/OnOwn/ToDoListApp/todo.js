@@ -16,12 +16,12 @@ const todos = JSON.parse(localStorage.getItem("todos"))
 // ]
 
 
-
+// show value  even whn refreshed
 if(todos){
     todos.forEach(todo => addTodo(todo))
 }
 
-form.addEventListener("submit",(e)=>{
+form.addEventListener("submit",(e)=>{    // e = event which will go to form (action) here it goes to addtodo()
     e.preventDefault()
     addTodo()
 
@@ -30,21 +30,27 @@ form.addEventListener("submit",(e)=>{
 
 function  addTodo(todo){
 let todoText = input.value;
+// show value  even whn refreshed
 if(todo){
     todoText = todo.text
 }
-if(todoText){
-    const todoEL = document.createElement("li")
+//
+if(todoText){                    // if whn emty thn clicked enter this will be done so nothng will get listed
+    const todoEL = document.createElement("li") // creates a li element a c
+     //show value  even whn refreshed
     if(todo && todo.completed){
         todoEL.classList.add("completed")
     }
+
     todoEL.innerText = todoText;
 
-    todoEL.addEventListener("click",()=>{
-        todoEL.classList.toggle("completed")
+    // this is for cancel 
+    todoEL.addEventListener("click",()=>{               // left click and right click
+        todoEL.classList.toggle("completed")           
         updateLS()
     })
-    todoEL.addEventListener("contextmenu",(e)=>{
+    // this is for removing
+    todoEL.addEventListener("contextmenu",(e)=>{         // right click remove
         e.preventDefault()
 
         todoEL.remove()
@@ -53,7 +59,7 @@ if(todoText){
     // todoEL.innerText = todoText;
     
     todosUL.appendChild(todoEL);
-    input.value=""
+    input.value=""                 // input will keep staying
 
     updateLS()
 
@@ -63,18 +69,18 @@ if(todoText){
 }
 
 
-
-
+// for storinjg in local storage and whn loaded for first time get todos from local storage and show thm
+// local storage can store only strings 
 function updateLS(){
-    todoEL = document.querySelectorAll("li")
-    todos =[]
-    todoEL.forEach(todoEL =>{
+   const  todoELs = document.querySelectorAll("li")
+  const   todos =[]
+    todoELs.forEach(todoEL =>{
         todos.push({
             text: todoEL.innerText,
-            completed: todoEL.classList.contains("completed")
+            isCompleted: todoEL.classList.contains("completed")
         })
     })
-    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("todos", JSON.stringify(todos));   // updates in local storage
 }
 
 

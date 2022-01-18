@@ -129,10 +129,48 @@ console.log(shash);
 
 // 10)    Object.assign(): used to do deep copy in objects:
 
-
+//Among the Object constructor methods, there is a method Object.assign()
+// which is used to copy the values and properties from one or more source objects to a target object. 
+// Input : var obj1 = { a: 10 };
+//         var obj2 = { b: 20 };
+//         var obj3 = { c: 30 };
+//         var new_obj = Object.assign(obj1, obj2, obj3);
+//         console.log(new_obj);
+// Output : Object { a: 10, b: 20, c: 30 }
 
 
 // 11)  Destructuring:   VVIMP:
+// assign variables from objects:
+//previosly done :
+// var x = voxel.x;
+ var voxel = {x : 3.6 , y: 7.4 , z: 6.54};
+const {x , y , z} = voxel;
+
+
+// assign variables from nested objects:
+const a ={
+    start : {x: 5 ,y: 6},
+    end : {x: 6, y : -9}
+};
+const {start : {x : start}}
+
+// assign variables from arrays:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let sahsh ={
     name: "shash",
@@ -156,7 +194,10 @@ let {name , batch} = sahsh;
 // 12)   Object.entries()   :
 
 
+// Input : const obj = { 0: 'adam', 1: 'billy', 2: 'chris' };
+//         console.log(Object.entries(obj)[1]);
 
+// Output : Array ["1", "billy"]
 
 
 
