@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // syncronous : one expresion after another (in an orderly manner)
+        // asyncronous: no format any expression can get executed at any time or controlled time (no format)
+
+         console.log(1);
+    
+         // settimeout is an async func so the below func will run first and not wait for thihs to run
+        setTimeout(() => {
+            console.log(3)
+
+        },6000)
+
+
+
+        console.log(4);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -6,6 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+<!-- Bind method helps us to call the object inside an fuction -->
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- 
          // array properties : length....
    // array methods : map , filter , smoe , reduse ....
@@ -15,11 +28,77 @@
 
      -->
     <script>
-  
 // methods of function:  methods (call , apply , bind)
 
 
+// let obj1 ={
+//     abc : "abc",
+//     def : "def",
+// }
 
+// console.log(obj1);
+
+// console.log(this);  // will give us window object (browser object model)
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+// using BIND method:
+
+let shash ={
+    firstName : "shashwath",
+    lastName : "BC",
+    css : 3,
+    JS: 2,
+}
+
+
+    function fullname (){
+        console.log(this.firstName + ' ' + this.lastName + ' '+ this.css)
+    }
+
+    let fname = fullname.bind(shash);
+    fname();
+    //or
+    fullname.bind(shash)();
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// using call : here it can take arguments (does not return a func)
+//arguments are specifined in an array
+
+
+let shash ={
+    firstName : "shashwath",
+    lastName : "BC",
+    css : 3,
+    JS: 2,
+}
+
+
+    function fullname (city , state){
+        console.log(this.firstName + ' ' + this.lastName + ' '+ city+ " "+ state)
+    }
+
+    // fullname("shsad","jdfj");
+    
+    let fname = fullname.call(shash , "sf","jskdbkfj")
+
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// using apply:  arguments are specifined in an array
+
+let shash ={
+    firstName : "shashwath",
+    lastName : "BC",
+    css : 3,
+    JS: 2,
+}
+
+
+    function fullname (city , state){
+        console.log(this.firstName + ' ' + this.lastName + ' '+ city+ " "+ state)
+    }
+
+
+fullname.apply(shash , ["dsf","sdgd"])
 
 
 
