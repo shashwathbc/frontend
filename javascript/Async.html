@@ -6,29 +6,47 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 id="datee"></h1>
     <script>
         // syncronous : one expresion after another (in an orderly manner)
         // asyncronous: no format any expression can get executed at any time or controlled time (no format)
 
+        //Asynchronous code allows the program to be executed immediately where the synchronous code
+        // will block further execution of the remaining code until it finishes the current one.
+
          console.log(1);
     
          // settimeout is an async func so the below func will run first and not wait for thihs to run
+         //this will run only after  4 seconds.
         setTimeout(() => {
-            console.log(3)
+            console.log(2)
 
-        },6000)
+        },4000)
 
+        console.log(3);
 
+        //setInterval is an async func for every (2sec optional) it will keep on repeating
+        setInterval(() =>{
+            console.log(4);
+        },2000)
 
-        console.log(4);
+        console.log(5);
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+        
 
+        // Date:
+        //libraries uses are : moment js , day js.
+        setInterval(() =>{
+            console.log( new Date());
+            document.getElementById("datee").innerText = new Date();
+        },2000)
 
+        setInterval(() =>{
+            // document.getElementById("datee").innerText = new Date().toLocaleDateString("hi-IN");
+            document.getElementById("datee").innerText = new Date().toLocaleDateString("en-US", {weekday: "long" , year: "numeric" , month : "long" });
+        },2000)
 
-
-
-
-
+        console.log(7);
 
 
 

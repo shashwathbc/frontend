@@ -13,6 +13,7 @@ function resetGrid(){
 
 }
 
+// in the assignment if i want the previous color entered to stay as it is 
 
 function changeColor(){
     const blockId = document.getElementById("block_id");
@@ -24,7 +25,8 @@ function changeColor(){
     if(!colorId.value){
         alert("please enter color id");
     }
-    resetGrid()
+    // resets the previous color: if not added then all previous color will keep thr only:
+    resetGrid();
     
     //
     const gridItem = document.getElementById(blockId.value)

@@ -9,7 +9,7 @@
     <!-- to display all the obnes who like the icecream in the given obj -->
     <script>
 
-let inputArray = [
+let users = [
       {name: 'Amber', batch: 'Batch 12', likesIceCream: false},
       {name: 'Pratik', batch: 'Batch 12', likesIceCream: true},
       {name: 'Charan', batch: 'Batch 11', likesIceCream: false},
@@ -17,19 +17,34 @@ let inputArray = [
       {name: 'Anirban', batch: 'Batch 10', likesIceCream: false}
     ]
 
+// 1)   
+ var result  = [];
 
-
-let result =  inputArray.filter( e => e.likesIceCream === true);
+for(var name in users) {
+    result.push(users.name);
+}
 
 console.log(result);
 
 
+//2) maping it then filter it to new 
+
+let myArr = users.map(users => {
+    if(users.likesIceCream){
+        return users.name;
+    }
+})
+
+let res = myArr.filter(users => users)
+console.log(myArr);
 
 
 
+//3) using filter then maping it
 
-
-
+let like =  users.filter(users => users.likesIceCream);
+let nam = like.map(users => users.name);
+console.log(nam);
 
 
 
