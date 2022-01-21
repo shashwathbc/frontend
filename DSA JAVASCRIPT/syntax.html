@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//map
+array.map(function(currentValue, index, arr), thisValue)
+//EX:
+const numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction)
+
+function myFunction(num) {
+  return num * 10;
+}
+
+//filter:
+array.filter(callback(element, index, arr), thisValue)
+//EX:
+const ages = [32, 33, 16, 40];
+const result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+//setInterval:
+myInterval = setInterval(function, milliseconds);
+//EX:
+setInterval(() =>{
+            console.log(4);
+        },2000)
+
+
+//setTimeOut:
+myTimeout = setTimeout(function, milliseconds);
+//EX:
+setTimeout(() => {
+            console.log(2)
+
+        },4000)
+
+        
+
+// arrow function :
+let myFunction = (a, b) => a * b
+//EX:
+hello = () => {
+  return "Hello World!";
+}
+
+
+//anonymouus function:
+function() {
+    // Function Body
+ }
+//EX:
+var greet = function () {
+    console.log("Welcome to GeeksforGeeks!");
+};
+  
+greet();
+
+
+
+//default parameters:
+function multiply(a, b) {
+  return a * b
+}
+
+
+//hoisting: a variable can be used before it has been declared.
+//EX:
+x = 5; // Assign 5 to x
+
+elem = document.getElementById("demo"); // Find an element
+elem.innerHTML = x;                     // Display x in the element
+
+var x;
+
+
+
+//self invoking function:
+
+
+
+
+//events:
+// <button event="some JavaScript">
+
+
+
+// Objects:
+
+let obj ={
+    name : "shash",
+}
+
+obj();
+//or
+console.log(obj.name);
+
+
+//adding new keys and prop to an existing obj:
+obj.newobj ="newobj";
+
+
+//nested obj:
+let obj1 ={
+    name : "shash",
+    address: {
+        add:"sdf",
+    }
+}
+// calling nested obj:
+console.log(obj1.address.add);
+
+
+
+//This:
+
+
+//JSON stringify:
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -6,10 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- to display all the obnes who like the icecream in the given obj -->
     <script>
 
-let users = [
+let employees = [
       {name: 'Amber', batch: 'Batch 12', likesIceCream: false},
       {name: 'Pratik', batch: 'Batch 12', likesIceCream: true},
       {name: 'Charan', batch: 'Batch 11', likesIceCream: false},
@@ -17,34 +16,40 @@ let users = [
       {name: 'Anirban', batch: 'Batch 10', likesIceCream: false}
     ]
 
-// 1)   
- var result  = [];
 
-for(var name in users) {
-    result.push(users.name);
-}
-
-console.log(result);
+var output =  employees.filter(employee =>  employee.batch == "Batch 12" && employee.likesIceCream == true);
 
 
-//2) maping it then filter it to new 
-
-let myArr = users.map(users => {
-    if(users.likesIceCream){
-        return users.name;
-    }
-})
-
-let res = myArr.filter(users => users)
-console.log(myArr);
+console.log(output);
 
 
 
-//3) using filter then maping it
 
-let like =  users.filter(users => users.likesIceCream);
-let nam = like.map(users => users.name);
-console.log(nam);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
