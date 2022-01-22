@@ -187,7 +187,7 @@
  const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
 //  console.log(document.querySelectorAll('[data-time]'));
 // when ever we get the data time we will convert it to this below
- const nodes = timeNodes.map(node => node.dataset.time);
+ const times = timeNodes.map(node => node.dataset.time);
 //  console.log(times);
 
  const seconds = times.map(time => {
@@ -213,5 +213,9 @@ secLeft = secLeft%60;
 document.querySelector('.total').innerHTML =`${hh}:${mm}:${secLeft}`;
 
 </script>
+
+
+
+
 </body>
 </html>
