@@ -1,0 +1,93 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // in this the secpnd func will wait for the first function to be executed :
+      // const   f1 = (callback) => {
+      //     setTimeout(() => {
+      //         console.log("Function 1 executed");
+      //         callback();
+      //     },2000)
+      // }
+
+      // f1(() => {
+      //     console.log("this should be executed in  the last ")
+      // })
+
+      //**************************************************************************************
+      //step 1 : order recived
+      //step 2 : chef started preparing
+      //step 3 : 5sec buffer time  : pizza sause added
+      //step 4 : 3 sec buffer time : first layer of cheese added
+      //step 5 : 4 sec buffer time : toppings added
+      //step 6 : 2 sec buffer time : final layer of cheese done
+      //step 7 : 6 sec buffer time : pizza backed
+      //step 8 : 4 sec buffer time :  oregano added and packed
+      // step 9 :   order is ready and ready to be handed obver to zomato delivery guy
+
+      //CALLBACK HELL: 
+      const executeOrder = function (callback) {
+        setTimeout(() => {
+          console.log("order recivwed");
+          console.log("Chef started preparing");
+          setTimeout(function () {
+            console.log("pizaza sause added");
+            setTimeout(function () {
+              console.log("first layer of cheese added");
+              setTimeout(function () {
+                console.log("toppings added");
+                setTimeout(function () {
+                  console.log("final layer of cheese done");
+                  setTimeout(function () {
+                    console.log("pizza backed");
+                    setTimeout(function () {
+                      console.log("oregano added and packed");
+                      callback();
+                    }, 4000);
+                  }, 6000);
+                }, 2000);
+              }, 4000);
+            }, 3000);
+          }, 5000);
+        }, 2000);
+      };
+
+      executeOrder(() => {
+        console.log(
+          "order is ready and ready to be handed obver to zomato delivery guy "
+        );
+      });
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
