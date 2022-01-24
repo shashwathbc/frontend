@@ -4,20 +4,17 @@
     padding: 0;
 }
 
-
 body{
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     height: 100vh;
-
 }
 
 .slider-container{
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100vw;
     height: 100vh;
 }
-
 
 .left-slide{
     height: 100%;
@@ -25,105 +22,68 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    transition: 0.3s ease;
+    /* transition */
 }
-
-
 
 .left-slide>div{
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: #fff;
-
 }
-
-
 
 .left-slide h1{
     font-size: 40px;
     margin-bottom: 10px;
-
+    /* margin-top:-30px; */
 }
-
 
 .right-slide{
     height: 100%;
     position: absolute;
     top: 0;
+    left: 35%;
     width: 65%;
+
+    /* transition */
 }
 
 .right-slide>div{
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;   
+    background-position: center center; 
+    /*  x and y */
     height: 100%;
     width: 100%;
 }
 
-
 button{
     background-color: #fff;
     border: none;
-    color: #fff;
-    font-size: 16px;
+    color: #aaa;
     cursor: pointer;
+    font-size: 16px;
     padding: 15px;
-
 }
 
-
-
-
-.slide-container .action-buttons button {
+.slider-container .action-buttons button{
     z-index: 100;
     position: absolute;
     left: 35%;
     top: 50%;
 }
 
-
-.slide-container .action-buttons .down-button {
+.slider-container .action-buttons .down-button{
     transform: translateX(-100%);
-  
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.slider-container .action-buttons .up-button{
+    transform: translateY(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
