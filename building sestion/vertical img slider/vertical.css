@@ -11,7 +11,7 @@ body{
 
 .slider-container{
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
 }
@@ -22,7 +22,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    /* transition */
+    transition : 05s ease
 }
 
 .left-slide>div{
