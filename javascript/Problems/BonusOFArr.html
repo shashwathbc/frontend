@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   
+<script>
+  // return an array with updated banbalance in such a way 
+//   if even give a 20% bonus 
+// if odd five 35% bonus
+
+  let bankBal = [30000,10000,50000,20000,40000];
+  const updated = bankBal.map(function(n) {
+    if (bankBal[0] % 2 == 0){
+        return  (20 / 100) * 10000;
+    }
+    else{
+        return (35 / 100) * 10000;
+        console.log(bankBal);
+    }
+})
+console.log(updated);
+
+
+
+
+    // function updated()
+    // {
+    // if (bankBal % 2 == 0)
+    //     return  (20 / 100) * 10000;
+      
+    // else
+    //     return (35 / 100) * 10000;
+    //     console.log(bankBal);
+    // }
+
+
+// updated();
+// console.log(bankBal);
+
+
+
+// const updated = bankBal.map(e => e%2 == 0);
+// console.log(updated);
+
+
+// const updated = bankBal.map(function(n) {
+//     return (20/100) *10000;
+// })
+// console.log(updated);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
