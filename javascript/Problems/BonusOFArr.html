@@ -13,13 +13,15 @@
 //   if even give a 20% bonus 
 // if odd five 35% bonus
 
-  let bankBal = [30000,10000,50000,20000,40000];
+
+//1st case:
+  let bankBal = [90000,10000,50000,20000,40000];
   const updated = bankBal.map(function(n) {
-    if (bankBal[0] % 2 == 0){
-        return  (20 / 100) * 10000;
+    if (n % 2 == 0){
+        return  (20 / 100) * n  ;
     }
-    else{
-        return (35 / 100) * 10000;
+    else if(n % 2 !== 0){
+        return (35 / 100) * n  ;
         console.log(bankBal);
     }
 })
@@ -27,7 +29,7 @@ console.log(updated);
 
 
 
-
+// 2nd case:
     // function updated()
     // {
     // if (bankBal % 2 == 0)
@@ -39,38 +41,26 @@ console.log(updated);
     // }
 
 
-// updated();
-// console.log(bankBal);
+//3rd case:
+// let bankBalance = [30000,10000,50000,20000,40000];
+//     let len = bankBalance.length;
 
+//     bankBalance.forEach((ele,idx)=>{
+//       str=ele.toString();
+//       if(parseInt(parseInt(str[0]))%2===0){
+//         bankBalance.push(parseInt(ele)(20/100)+ele);
 
+//       }else{
+//         bankBalance.push(parseInt(ele)(35/100)+ele)
 
-// const updated = bankBal.map(e => e%2 == 0);
-// console.log(updated);
+//       }
+//     })
 
+//     for(let i =0, j=0; i<len && j<len ;i++,j++){
+//       bankBalance.shift();
+//     }
 
-// const updated = bankBal.map(function(n) {
-//     return (20/100) *10000;
-// })
-// console.log(updated);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  console.log(bankBalance)
 
 
 
