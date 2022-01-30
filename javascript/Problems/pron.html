@@ -8,8 +8,8 @@
 <body>
     <script>
 
-let result = [];
 
+let result = [];
 
 let students = [
       {
@@ -52,16 +52,27 @@ let students = [
  
 students.forEach( student => {
   result.push({
-    marks: Object.values(student.marks).reduce((a, b , c , d , e ) => a + b + c + d + e)
+    total: Object.values(student.marks).reduce((acc, curVal) => acc.concat(curVal), []);
   })
 });
 
 console.log(result)
 
 
+// let result = [];
+// let students = [{name: "Sham",sub: {math: 95,eng: 90,science: 99}},{name: "Peter",sub:{math: 80,eng: 70,science: 60}},{name: "Bob",sub:{math:70,eng:75,science:95}}];
 
+// students.forEach( student => {
+//   result.push({
+//     marks: Object.values(student.sub).reduce((a, b) => a + b)
+    
+//   }  
+//   )
 
-//created an empty array , the I thought of creating a function to push the desired code (but not able access and add it )
+// });
+
+// console.log(result)
+
 
 
 
