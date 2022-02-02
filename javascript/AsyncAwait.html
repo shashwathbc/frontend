@@ -59,20 +59,77 @@
     //   }
     //   asyncCall();
       //ex 3 :
-         function abc() {
-        return  new Promise ((resolve) => {
+      //    function abc() {
+      //   return  new Promise ((resolve) => {
+      //       setTimeout(() =>  {
+      //       resolve ("resolved in 3 sec ");
+      //     }, 5000);
+      //   });
+      // }
+
+      // async function display() {
+      //   const result = await abc();
+      //   console.log(result);
+      // }
+      // display();
+
+
+      //ex: 4:
+    async  function abc() {
+      console.log("func started")
+        await  new Promise ((resolve,rej) => {
             setTimeout(() =>  {
             resolve ("resolved in 3 sec ");
-          }, 2000);
+          }, 5000);
         });
+        return '[promise returned'
       }
 
       async function display() {
+        console.log("started");
         const result = await abc();
         console.log(result);
+        console.log("ended");
       }
       display();
-       
+
+
+//async await : to hadle rejected onses:
+
+// use try and catch:
+
+// async function f() {
+
+// try {
+//   let response = await fetch('/no-user-here');
+//   let user = await response.json();
+// } catch(err) {
+//   // catches errors both in fetch and response.json
+//   alert(err);
+// }
+// }
+
+// f();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
     </script>
   </head>
   <body></body>
