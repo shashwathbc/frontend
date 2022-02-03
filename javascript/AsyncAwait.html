@@ -98,19 +98,23 @@
 
 // use try and catch:
 
-// async function f() {
+async function f() {
 
-// try {
-//   let response = await fetch('/no-user-here');
-//   let user = await response.json();
-// } catch(err) {
-//   // catches errors both in fetch and response.json
-//   alert(err);
+try {
+  let response = await fetch('/no-user-here');
+  let user = await response.json();
+} catch(err) {
+  // catches errors both in fetch and response.json
+  alert(err);
+}
+}
+
+f();
+
+//to get the rejected ones:
+// } catch (error) {
+//     return Promise.reject(new Error(400));
 // }
-// }
-
-// f();
-
 
 
 
