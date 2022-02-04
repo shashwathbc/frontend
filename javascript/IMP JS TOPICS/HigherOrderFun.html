@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Function</title>
+</head>
+<body>
+    <script>
+
+function x(){      // callback func
+    console.log("namasthe")
+}
+
+function y(x){      // higher order func
+    x();
+}
+
+
+// Example 1: // cal area of the these 4 cirlces when radius given:
+const radius = [3,1,2,4];
+
+const calculateArea = function (radius){
+    const output = [];
+    for(i=0;i<radius.length;i++){
+        output.push(Math.PI * radius[i] * radius[i]); // pi r2
+    }
+    return output;
+}
+console.log(calculateArea(radius));
+// to calculate circumferance of the circle:
+const calculateCurcumferance = function(radius){
+    const output = [];
+    for(i=0;i<radius.length;i++){
+        output.push(2* Math.PI * radius[i] );    //2 pi r
+    }
+    return output;
+}
+console.log(calculateCurcumferance(radius));
+// to calculate diameter of the circle :
+const calculateDiameter = function(radius){
+    const output = [];
+    for(i=0;i<radius.length;i++){
+        output.push(2 *  radius[i] );    //2  r
+    }
+    return output;
+}
+console.log(calculateDiameter(radius));
+
+
+
+// Example 2 : //we r repeating the code again and again in the above function so to solve this : functional programming
+
+const radius = [3,1,2,4];
+//callback
+const area = function (radius){
+    return Math.PI * radius * radius;
+}
+//callback
+const circumferance = function(radius){
+    return 2 * Math.PI * radius;
+}
+
+//callback
+const diameter = function (radius){
+    return 2 * radius;
+}
+
+// this is an higher order function
+const calculate = function(radius , logic){
+    const output = [];
+    for(i=0;i<radius.length;i++){
+        output.push(logic(radius[i]));
+    }
+    return output;
+}
+console.log(calculate(radius , area));
+console.log(calculate(radius, circumferance));
+console.log(calculate(radius , diameter));
+
+//or using map :
+console.log(radius.map(area));
+
+
+
+
+    </script>
+</body>
+</html>
