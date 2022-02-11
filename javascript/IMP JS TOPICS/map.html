@@ -7,13 +7,49 @@
 </head>
 <body>
     <script>
+// map is used to convert the given array into whatever want it to be : 
+const arr = [5,1,3,2,6];
+
+//double the arr:
+function double(x){
+   return x * 2;
+}
+
+// triple the arr:
+function triple(x){
+    return x * 3;
+}
+
+// find the binary of the arr:
+function binary(x){
+    return x.toString(2);
+}
+
+
+const output = arr.map(binary);
+
+console.log(output);
 
 
 
+//another way to write map is :
+
+//multiple of 4 :
+const multipleOfFour =  arr.map(function mul(x){
+    return x*4;
+} )
+console.log(multipleOfFour);
 
 
-
-
+// writing map using arrow function :
+//1)
+const multipleOfFive =  arr.map((x) => {
+    return x*5;
+} )
+console.log(multipleOfFive);
+//2)
+const mulsix = arr.map((x) => x*6);
+console.log(mulsix);
 
 
 
