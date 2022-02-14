@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+  <div id="app" style="margin: auto; width: 50%; border: 3px solid wheat; padding: 10px;">
+
+  </div>
+  <script>
+
+//GET REQEST : 
+
+function  fetchData(){
+  fetch("https://reqres.in/api/users?page=2")
+  .then(res => {
+    console.log(res);          //gives a responce object
+    if(!res.ok){
+      throw Error('ERROR FOUND')      // if url is wrong we will get TypeError
+    }
+    // const data = res.json();
+    // console.log(data);         // gives a promise which is a pending state 
+    // return data;
+    return res.json();
+  }).then(data => {
+    // console.log(data);           //will have all the data 
+    console.log(data.data);        // will have only the array of object 
+    //displayeing the data to windows: 
+    const html = data.data.map(user => {
+      return  `
+      <div class ="user">
+      <p><img src="${user.avatar}"</p>
+      <p>FirstName : ${user.first_name}</p>
+      <p>LastName : ${user.last_name}</p>
+      <p>Email : ${user.email}</p>
+      <br>
+      </div>
+      `
+    }).join("");
+     console.log(html);
+    // document.querySelector("#app") // this can be displayed
+    // .insertAdjacentHTML('afterbegin' ,'<h1>Hellooo</h1>'); 
+    document.querySelector("#app") // this can be displayed
+    .insertAdjacentHTML('afterbegin' ,html); 
+  }).catch(err => {
+    console.log(err);
+  })
+}
+fetchData();
+
+
+
+
+//POST REQEST :
+
+
+function  postData(){
+  fetch("https://reqres.in/api/users?page=2" , {
+    method : 'POST',
+    headers:{
+      'Content-Type' : 'application/json'
+    },
+    body: JSON.stringify( {
+      name : "shash",
+      job: "leader",
+    })
+  })
+  .then(res => {
+    console.log(res);          //gives a responce object
+    if(!res.ok){
+      throw Error('ERROR FOUND')      // if url is wrong we will get TypeError
+    }
+    // const data = res.json();
+    // console.log(data);         // gives a promise which is a pending state 
+    // return data;
+    return res.json();
+  }).then(data => {
+    console.log(data);           //will have all the data 
+    //posting  the data to windows: 
+
+      
+  }).catch(err => {
+    console.log(err);
+  })
+}
+postData();
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
+
+

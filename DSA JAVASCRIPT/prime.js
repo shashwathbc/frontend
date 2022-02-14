@@ -40,19 +40,19 @@ console.log(prime(3));
 
 //.some give list of ele find wht atlean one elem is prime 
 
-let arr = [4,4,4,20,6];
+// let arr = [4,4,4,20,6];
 
-let prime = arr.some((element) =>{
-      let flag = true;
-      for( let i=2;i<element;i++){
-          if(element % i== 0){
-            flag = false
-          break;
-          }
-      }
-      return flag
-})
-console.log(prime);
+// let prime = arr.some((element) =>{
+//       let flag = true;
+//       for( let i=2;i<element;i++){
+//           if(element % i== 0){
+//             flag = false
+//           break;
+//           }
+//       }
+//       return flag
+// })
+// console.log(prime);
 
 
 

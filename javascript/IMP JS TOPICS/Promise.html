@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+//Promise : resolve , reject , pending
+
+function a(){
+    return new Promise(function(resolve , reject){
+        setTimeout(() => {     
+            const error = true;           //true / false 
+            if(!error){
+                console.log("Promise Resolved");
+            resolve();
+            }                     //generally used during network 
+            else{
+                console.log("Not Resolved");
+                reject("Not Fulfilled")
+            }
+    
+        },2000)
+    })
+}
+a().then(function(){
+    console.log("Shashwath Resolved")
+}).catch(function(error){
+    console.log("Error not reolved shash:  " + error)
+});
+//.then is used when if the promise is resolved do this ... and catch is used to catch the error if found
+//promse method then : if promise is reloved we will do this function.  - resolve 
+//promise method catch : if promise is rejected this function will run.  -reject
+
+
+
+
+///Promise .all:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Promise .any:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
