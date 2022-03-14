@@ -10,13 +10,14 @@ class HelloClass extends Component {
   }
 
   changeGreetto = () => {
-        console.log("I am CHANGING ")
+        // console.log("I am CHANGING ")
         // this.state.greetTo = "INDIA"   cannot be done like this instesad use setState
         this.setState(
           {
             greetTo : "INDIA"
           }
         )  
+        console.log(this.state.greetTo)
   }
 
  

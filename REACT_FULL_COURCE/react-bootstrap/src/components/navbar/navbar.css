@@ -1,0 +1,9 @@
+ .brand{
+    color: white !important;
+}
+
+
+.my-site .navbar-collapse .navbar-nav .nav-link{
+    color: white;
+}
+
