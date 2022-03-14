@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- to display all the obnes who like the icecream in the given obj -->
+    <script>
+
+let users = [
+      {name: 'Amber', batch: 'Batch 12', likesIceCream: false},
+      {name: 'Pratik', batch: 'Batch 12', likesIceCream: true},
+      {name: 'Charan', batch: 'Batch 11', likesIceCream: false},
+      {name: 'Dhanashree', batch: 'Batch 12', likesIceCream: true},
+      {name: 'Anirban', batch: 'Batch 10', likesIceCream: false}
+    ]
+
+
+let result = users.filter(ele => ele.likesIceCream);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 1)   
+ var result  = [];
+
+for(var name in users) {
+    result.push(users.name);
+}
+
+console.log(result);
+
+
+//2) maping it then filter it to new 
+
+let myArr = users.map(users => {
+    if(users.likesIceCream  &&  users.batch =='Batch 12'){
+        return users.name;
+    }
+})
+
+let res = myArr.filter(users => users)
+console.log(myArr);
+
+
+
+//3) using filter then maping it
+
+let like =  users.filter(users => users.likesIceCream);
+let nam = like.map(users => users.name);
+console.log(nam);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

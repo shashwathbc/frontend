@@ -1,0 +1,235 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+   // 1) template string: used instead of using those old style of "hf"+  +"hfj"..
+
+   let name = 'shash'
+   console.log(`${name} is a good `);
+
+
+   // 2)  let and const 
+
+//    let name = 'shash'   : scope 
+//    const name = 'shash' : constant cannot change
+
+//     3)  arrow function:
+// function abc(){
+//     console.log(abc)
+// }
+//or use arrow func instead:
+let abc = ()  =>  console.log("abc")
+
+
+
+// 4)  default parameters:
+// function abc(a , b){
+//     console.log(a+b)
+// }   
+
+// abc()
+// we get NaN
+
+
+// 5) multi line string:
+let greeting = `Hello World,     
+                Greetings to all,
+                Keep Learning and Practicing!`
+
+
+console.log(greeting)
+
+
+// 6) exponential operators:
+
+let a = 3** 2
+console.log(a)
+
+
+// 7) spread Operator:  used to store or concat arrays.  
+
+let numberStore = [0, 1, 2];
+let newNumber = 12;
+numberStore = [...numberStore, newNumber];
+
+
+console.log(numberStore)
+
+
+//or
+
+let a1 =[1,2,3]
+let a2 = [4,5]
+let a3 =[...a1, ...a2]
+console.log(a3)
+
+
+//or    for objects:
+
+let details ={
+            'name':'shash',
+            'country': 'india',
+            'cource': 'webdev',
+        }
+//  console.log({...details})
+
+let details2 ={
+           ...details,
+        }
+
+
+     details2.name ="secname"   
+         console.log({...details})
+
+//or
+
+
+
+
+ //   8) includes(): it checks if an char is present in an variable (true or false)
+
+ let x = "Hello World"
+ x.includes("h")
+
+
+
+ //9)  Object Property Assignment:
+
+ let firstName = "shashwath";
+ let lastName = "B C";
+
+
+let shash ={
+    firstName: firstName,
+    lastName: lastName,
+}
+
+console.log(shash);
+
+
+//or using Object Property Assignment if var and key are same then no need to use
+// let shash ={
+//     firstName: firstName,
+//     lastName: lastName,
+// }
+
+//use this : to display in console:
+// let shash ={
+//     firstName,
+//     lastName,
+// }
+
+
+
+// 10)    Object.assign(): used to do deep copy in objects:
+
+//Among the Object constructor methods, there is a method Object.assign()
+// which is used to copy the values and properties from one or more source objects to a target object. 
+// Input : var obj1 = { a: 10 };
+//         var obj2 = { b: 20 };
+//         var obj3 = { c: 30 };
+//         var new_obj = Object.assign(obj1, obj2, obj3);
+//         console.log(new_obj);
+// Output : Object { a: 10, b: 20, c: 30 }
+
+
+// 11)  Destructuring:   VVIMP:
+// assign variables from objects:
+//previosly done :
+// var x = voxel.x;
+ var voxel = {x : 3.6 , y: 7.4 , z: 6.54};
+const {x , y , z} = voxel;
+
+
+// assign variables from nested objects:
+const a ={
+    start : {x: 5 ,y: 6},
+    end : {x: 6, y : -9}
+};
+const {start : {x : start}}
+
+// assign variables from arrays:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let sahsh ={
+    name: "shash",
+    batch: 11,
+
+}
+
+
+ console.log(sahsh.batch);
+//or :
+let batch = sahsh.batch;
+console.log(batch);
+
+
+//or desst:
+let {name , batch} = sahsh;
+
+
+
+
+// 12)   Object.entries()   :
+
+
+// Input : const obj = { 0: 'adam', 1: 'billy', 2: 'chris' };
+//         console.log(Object.entries(obj)[1]);
+
+// Output : Array ["1", "billy"]
+
+
+
+
+
+
+
+
+// ***************************************************************************************************************
+
+//(shallow copy)
+let obj= {
+    abc : "abc",
+    def: "def",
+}
+// let x = obj;
+// x.abc ="xyz";
+// console.log(obj);
+// or use spread operator to do deep copy
+
+
+// negative infinity and infinity:
+
+
+// swap no:
+let a = 1;
+let b = 2;
+[a, b] = [b, a];
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Block scope </title>
+ </head>
+ <body>
+     <script>
+         
+
+//block :
+// {
+//     var a = 10;
+//     console.log(a);     //10
+
+// }
+
+
+
+//*&*&*&*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+
+// if(true) {
+//     var a = 10;
+//     console.log(a);     //10
+// }
+
+//*&*&*&*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+// if(true) true;
+
+
+//*&*&*&*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+// if(true) console.log("dmeo ");
+
+
+
+//*&*&*&*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+// {
+//     var a = 10;       //global scope - undefined
+//     let b = 20;       //block scope - undefined
+//     const c = 30;     // block scope - undefined
+// }
+
+
+
+//*&*&*&*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+// {
+//     var a = 10;       
+//     let b = 20;       
+//     const c = 30;  
+//     console.log(a);    //10
+//     console.log(b);   //20
+//     console.log(c);   //30
+
+// }
+//     console.log(a);    //10
+//     console.log(b);   // reference error : b is not defined 
+//     console.log(c);   //
+
+
+
+//*&*&*&*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+//shadowingg here the var a = 10; shadows the var a = 100; 
+// var a = 100;
+// {
+//     var a = 10;       
+//     let b = 20;       
+//     const c = 30;  
+//     console.log(a);    //10
+//     console.log(b);   //20
+//     console.log(c);   //30
+// }
+
+// console.log(a);    // 10 
+
+
+
+//same thing with const also : 
+let b = 100;
+{
+    var a = 10;       
+    let b = 20;       
+    const c = 30;  
+    console.log(a);    //10
+    console.log(b);   //20
+    console.log(c);   //30
+}
+
+console.log(b);    // 100
+
+
+
+
+//shadowing with a function : 
+
+const c = 100;
+function x(){
+    const c = 30;
+    console.log(c);
+}
+x();                 //30
+console.log(c);      //100
+
+
+
+
+
+let a = 100;
+{
+    var a = 30;         //syntax error : a already declared 
+} 
+
+
+//*****************************88
+
+var a = 100;
+{
+    let a = 30;         //valid no error 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </script>
+ </body>
+ </html>

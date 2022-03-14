@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <script>
+//closures: a function bind together with ts lexical environment 
+//function along with its lexical scope  forms a closures.
+//Example:
+    // function x (){
+    //     var a = 7;
+    //     function y(){
+    //         console.log(a);
+    //     }
+    //     y();
+    // }
+    // x();
+
+
+//we can return a function within a function:
+ // example 2: 
+// function x (){
+//         var a = 7;
+//         function y(){
+//             console.log(a);
+//         }
+//         return y;
+//     }
+//     var z = x();
+//     console.log(z);         // will give us the whole function y 
+//     z();                    // 7 
+
+    //or: same as ex 2: 
+    // function x (){
+    //     var a = 7;
+    //     return function y(){
+    //         console.log(a);
+    //     }
+    // }
+    // var z = x();
+    // console.log(z);         // will give us the whole function y 
+    // z();                    // 7 
+
+
+
+    //exapmple 3:
+   // will work with car and let but not const(typeerror:assignment to constant variable )
+    // function x (){
+    //     var a = 30;
+    //     function y(){
+    //         console.log(a);
+    //     }
+    //     a = 100;
+    //     return y;
+    // }
+
+    // var z = x();
+    // console.log(z);       // will give us the whole function y 
+    // z();                 //100
+ 
+
+
+//Example 4 :
+
+function z(){
+    var a =200;
+
+    function x (){
+       var b = 60;
+
+       function y(){
+           console.log(a , b);         //o/p:  200 , 60
+       }
+        y();
+    }
+    x();
+}
+
+z();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

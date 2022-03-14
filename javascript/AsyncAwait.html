@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // async function abc(){
+      //     return 'abc'
+      // }
+      // console.log(abc());
+
+      // async function abc(){
+      //    try{
+      //       if(1 < 2){
+      //           throw "flase value"
+      //       }
+      //    }catch(err){
+      //        return err;
+      //    }
+      // }
+
+    //    function abc() {
+    //     return  new Promise (resolve => {
+    //         setTimeout(() =>  {
+    //         return ("resolved in 3 sec ");
+    //       }, 2000);
+    //     });
+    //   }
+      // console.log(abc());  this will give undefined with promise adn fullfilled
+
+      // abc().then(function(resolve){   // this will also give undefines
+      //     console.log(resolve);
+      // })
+
+    //   async function display() {
+    //     console.log("calling")
+    //     const result = await abc();
+    //     console.log(result);
+    //   }
+    //   display();
+
+
+      //EXAMPLE 2 : 
+
+    //   function resolveAfter2Seconds() {
+    //     return new Promise((resolve) => {
+    //       setTimeout(() => {
+    //         resolve("resolved");
+    //       }, 2000);
+    //     });
+    //   }
+    //   async function asyncCall() {
+    //     console.log("calling");
+    //     const result = await resolveAfter2Seconds();
+    //     console.log(result);
+    //     // expected output: "resolved"
+    //   }
+    //   asyncCall();
+      //ex 3 :
+      //    function abc() {
+      //   return  new Promise ((resolve) => {
+      //       setTimeout(() =>  {
+      //       resolve ("resolved in 3 sec ");
+      //     }, 5000);
+      //   });
+      // }
+
+      // async function display() {
+      //   const result = await abc();
+      //   console.log(result);
+      // }
+      // display();
+
+
+      //ex: 4:
+    async  function abc() {
+      console.log("func started")
+        await  new Promise ((resolve,rej) => {
+            setTimeout(() =>  {
+            resolve ("resolved in 3 sec ");
+          }, 5000);
+        });
+        return '[promise returned'
+      }
+
+      async function display() {
+        console.log("started");
+        const result = await abc();
+        console.log(result);
+        console.log("ended");
+      }
+      display();
+
+
+//async await : to hadle rejected onses:
+
+// use try and catch:
+
+async function f() {
+
+try {
+  let response = await fetch('/no-user-here');
+  let user = await response.json();
+} catch(err) {
+  // catches errors both in fetch and response.json
+  alert(err);
+}
+}
+
+f();
+
+//to get the rejected ones:
+// } catch (error) {
+//     return Promise.reject(new Error(400));
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    </script>
+  </head>
+  <body></body>
+</html>

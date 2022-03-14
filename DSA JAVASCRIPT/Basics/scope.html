@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//lexical environment : 
+//This will print 10: so b can be accesed inside the function;
+function a(){
+ console.log(b);
+}
+var b =10;
+a();
+
+
+//inner func also has access to the var e 
+function c(){
+    function d(){
+        console.log(e);
+    }
+    d();                  // if function in invoked 10 will be displayed otherwise it will display nothing
+}
+var e =10;               // if this was inside the outer function even then it would display 10 when called d()
+c();
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

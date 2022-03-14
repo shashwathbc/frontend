@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+// ERROR HANDLING:
+
+       // used whn server is used as respone
+       //used during api calls
+       // handlening error and exception in js.
+//  The try statement defines a code block to run (to try).
+
+// The catch statement defines a code block to handle any error.
+
+// The finally statement defines a code block to run regardless of the result.
+
+// The throw statement defines a custom error.
+
+   let a ="shash";
+   a = undefined;
+   if(a!= undefined){
+       throw new Error("This is not undefined");
+   }else{
+       console.log("This is undefined")
+   }
+
+
+
+   //or:
+
+   try {
+    
+    // asjkfjksbafjkb
+    console.log("inside try block")
+     functionok();   // if this was outside i would get error here  it goes to catch(error ) and that will run
+
+   } catch(error){
+         console.log("Are you okay?")
+         console.log(error); 
+         console.log(error.name);    // id used error.name (we will get only the error name)
+         console.log(error.message);       
+   }finally{
+       console.log("finally we will run this")
+   }
+
+
+
+
+
+
+
+   //or using all:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

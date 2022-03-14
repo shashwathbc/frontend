@@ -1,0 +1,14 @@
+.center{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+   margin-top: 300px;
+   font-size: larger;
+   display: flex;
+   justify-content: space-between;
+}
+

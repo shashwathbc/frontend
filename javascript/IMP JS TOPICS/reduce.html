@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDUCE</title>
+</head>
+<body>
+    <script>
+    //used where we take all the elements of an array and come with a single value of them.
+     
+     //
+     const arr  = [5,1,3,2,6];
+
+     //sum of an array:
+     
+     function findSum(arr){
+         let sum =0;
+         for(let i=0;i<arr.length;i++){
+             sum = sum +arr[i];
+         }
+         return sum;
+     }
+
+    console.log(findSum(arr));
+
+
+
+     //sum  of an array using reduce :
+
+     const output = arr.reduce(function(accumelator , current) {
+         accumelator = accumelator + current;
+         return accumelator;
+     },0);  //initial value is 0
+
+     console.log(output);
+
+
+
+    
+    //max of an array:
+      function findMax(arr){
+          let max =0;
+          for(let i=0;i<arr.length;i++){
+              if(arr[i] > max){
+                  max = arr[i];
+              }
+          }
+          return max;
+      }
+
+
+      console.log(findMax(arr));
+
+
+    //max of an array using reduce :
+
+    const op = arr.reduce(function(max,curr){
+        if(curr > max){
+            max = curr;
+        }
+        return max;
+    },0)
+
+    console.log(op);
+
+
+
+
+//***********************************************************************************************************************
+const users = [
+    {firstName: "shashwath" , lastName:"gh" , age:26},
+    {firstName: "shivu" , lastName:"ef" , age:22},
+    {firstName: "anjan" , lastName:"cd" , age:23},
+    {firstName: "amogh" , lastName:"ab" , age:22},
+];
+
+//to find how many people are of perticular uniqe  age:
+
+const UniqeAge = users.reduce(function(accu,currr){
+  if(accu[currr.age]){
+      accu[currr.age] = ++accu[currr.age];
+  }else{
+     accu[currr.age] = 1;
+  }
+  return accu;
+
+},{}) //here initial value is empty object;
+
+console.log(UniqeAge);
+
+
+
+
+//firname name of all the people whose age is less than 30 using reduce: 
+const employes = [
+    {firstName: "shashwath" , lastName:"gh" , age:26},
+    {firstName: "shivu" , lastName:"ef" , age:22},
+    {firstName: "anjan" , lastName:"cd" , age:53},
+    {firstName: "amogh" , lastName:"ab" , age:22},
+];
+
+
+const age = employes.reduce((acc,curr) =>{
+     if(curr.age<30){
+        acc=[...acc, curr.firstName ];
+}
+return acc;
+},[])
+
+console.log(age);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

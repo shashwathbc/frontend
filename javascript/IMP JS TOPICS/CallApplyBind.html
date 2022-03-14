@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Apply Bind </title>
+</head>
+<body>
+    <script>
+
+// Use .bind() when you want that function to later be called with a certain context, useful in events. Use .call() or .apply() when you want to invoke the function immediately, and modify the context.
+
+// Call/apply call the function immediately, whereas bind returns a function that,
+//  when later executed, will have the correct context set for calling the original function. 
+// This way you can maintain context in async callbacks and events.
+
+
+
+//The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// expected output: 2
+
+
+
+
+
+//The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+const module = {
+  x: 42,
+  getX: function() {
+    return this.x;
+  }
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// expected output: 42
+
+
+
+
+
+//The call() method calls a function with a given this value and arguments provided individually.
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = 'food';
+}
+
+console.log(new Food('cheese', 5).name);
+// expected output: "cheese"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

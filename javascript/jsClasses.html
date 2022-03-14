@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //   classes : template for object
+
+    class Student  {
+         constructor(name , course , batch , techStack){
+             this.name = name
+             this.course = course
+             this.batch = batch
+             this.techStack = techStack
+         }
+    }
+
+    let shash = new Student ("shash" , "course1" , "batch1" , "MERN" , "india ");
+     let countryname = "india";
+    Student.prototype.country = countryname;
+    console.log(Student);
+    console.log(shash);
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

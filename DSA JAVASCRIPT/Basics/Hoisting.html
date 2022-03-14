@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HOISTING IN JAVASCRIPT  -->
+    <!-- we can access variables and function even before inisializong  / puting some value to it without err  -->
+      <!-- The call stack is used by JavaScript to keep track of multiple function calls  -->
+      <script>
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+           function myname(){
+               let name = "Shashwath";
+               console.log(name);
+           }
+           myname();                 // prints only name
+          console.log(myname);      // calls the full function 
+
+ //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        getname();               // prints shashwath
+        console.log(x);          // prints undefined
+        console.log(getname);    // prints whole function
+
+        var x =9;
+        console.log(x);           // prints 9
+        function getname(){
+            console.log("shashwath");
+        }
+ 
+        // when same thing is done in arraow function getname() cannot be accessed at top but cam be placed after 
+        // funtion defination only then it will work
+
+
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        var x =9;
+        function getname(){
+            console.log("shashwath");
+        }
+
+
+        
+        getname();               // prints shashwath
+        console.log(x);          // prints 9
+        console.log(getname);    // prints whole function
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+ //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+       </script>
+</body>
+</html>

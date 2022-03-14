@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListeners</title>
+</head>
+<body>
+    <h1 id="heading">Namasthe javascript</h1>
+    <button id="clickMe">Click Me</button>
+
+    <script>
+    //here function x() is the callback function:
+    // document.getElementById("clickMe").addEventListener("click" , function x(){
+    //            console.log("Button Clicked");
+    // })
+    // o/p: Button Clicked
+
+
+    //closures with  event listeners:
+    // have to count how many times the button is clicked  and print that :
+    // let count =0;
+    // document.getElementById("clickMe").addEventListener("click" , function x(){
+    //            console.log("Button Clicked" , ++count);
+    // })
+
+    //or by using closure , since declaring variable in global scope is risky we can use closures(data hiding)
+    // function  attachEventListeners(){
+    //     let count =0;
+    // document.getElementById("clickMe").addEventListener("click" , function x(){
+    //            console.log("Button Clicked" , ++count);
+    // })
+
+    // }
+    // attachEventListeners();
+
+    //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+    //Garbage Collection and removeEventListeners:
+
+    //eventlisteners are heavy(takes memory) it wont be able to free up the memory so we remove eventlisterns when we are not  using them
+    //so when we remove eventlistersns all these variables which was held by this closures are garbage collected.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

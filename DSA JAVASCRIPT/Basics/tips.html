@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+// to remove duplicate eliments from an array: (set object type => ES6)
+const users = ["shash", "wath" , "shash", "rohith" , "pavan" , "pavan"];
+const unique = [...new Set(users)];
+console.log(unique);
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+// check if all(EVERY) of these value is greater than (Nth value of ur choice) value
+const taxVal = [10,30,30,40,50];
+const tax = taxVal.every(checkTax);
+function checkTax(val){
+    return val >= 30;
+}
+console.log(tax);
+// this will show false because not all the elements in the array is greater than 30
+// if instead of 10 there would be 30 then it would show true
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+//check if SOME of these value is greater than (Nth value of ur choice ) value
+const taxVale = [10,30,30,40,50];
+const taxe = taxVale.some(checkTax);
+function checkTaxe(vale){
+    return vale >= 30;
+}
+console.log(taxe);
+// this will show true because some values are greater than 30 
+// if none were greater than 30 then it would display false
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+// converting into an boolean:
+const xyz = !0;
+const zyz = !1;
+console.log(xyz);
+console.log(zyz);
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+//conditionally setting a variable:
+// let name = user.name;
+// if(user.name){
+//     name =' ';
+// }
+//instead of doing this we can do this below code:
+const name ={
+    age : "shash",
+}
+const abc =  name.age || ' ';  // if value is available use it else in default will be empty
+console.log(abc);
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+//Convert number into string:
+const num = 10 +"";
+console.log(typeof num);
+
+// converting a string into number:
+let str = "20";
+str = +20;      // + is an unary operator 
+console.log(str);
+console.log(typeof str);
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+ Navigator.appversion;
+ 
+
+
+
+
+let obj ={
+    name : "shash",
+}
+obj["newProp"] = " prop";
+console.log(obj); 
+
+ 
+
+
+
+
+    </script>
+</body>
+</html>

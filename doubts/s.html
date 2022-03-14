@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+
+* {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #04AA6D;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+  <!-- left side -->
+<div class="flex-child magenta">
+  <img src="https://lh3.googleusercontent.com/ogw/ADea4I7GuJadIjcA5p9mcmbBov42lbsZmSskvA8zGMi4jg=s83-c-mo" alt="" width="100" height="100">
+  <div class="info">
+     <ul>
+       <li><span>NAME:</span>Shashwath</li>
+        <li><span>PROFILE:</span>WEB DEVELOPER</li>
+         <li><span>EMAIL:</span>XYZgmail.com</li>
+     </ul>
+  </div>
+  <h1>My Skills</h1>
+
+  <p>HTML</p>
+  <div class="container">
+    <div class="skills html">90%</div>
+  </div>
+  
+  <p>CSS</p>
+  <div class="container">
+    <div class="skills css">80%</div>
+  </div>
+  
+  <p>JavaScript</p>
+  <div class="container">
+    <div class="skills js">65%</div>
+  </div>
+  
+  <p>PHP</p>
+  <div class="container">
+    <div class="skills php">60%</div>
+  </div>
+</div>
+
+  <!-- right side -->
+  <div class="flex-child green">
+  <div class="heading">
+    <h1>About me</h1>
+  </div>
+  <div class="aboutme">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et dignissimos distinctio praesentium quia tempore sapiente nulla enim quidem soluta facilis quo corporis eveniet illo aspernatur ea, optio ut voluptates deserunt. Quidem mollitia debitis tempore voluptates excepturi assumenda. Accusamus repudiandae cumque maiores impedit dolore reprehenderit. Nobis est facere ratione quis consectetur!</p>
+   
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste pariatur, assumenda aut alias nam non! Nihil voluptate et accusamus voluptatum iste optio obcaecati ipsum consequatur magni! Eligendi repudiandae aliquid accusantium!</p>
+</div>
+</div>
+  </div>
+</body>
+</html>

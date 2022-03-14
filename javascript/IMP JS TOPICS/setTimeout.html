@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout & closures</title>
+  </head>
+  <body>
+    <script>
+      //here it will print 1 after 3 sec
+      function x (){
+          var a = 1;
+          setTimeout(function() {
+              console.log(a);
+          },3000)
+          console.log("what will happen here ");
+      }
+      x();
+
+      // o/p:* what will happen here
+      //     * 1
+
+      // example 2:
+      setTimeout(function(){
+          var a = 5;
+          console.log(a);
+      },3000)
+
+      //Example 3:
+      function x(){
+          for(var i=1;i<=5;i++){
+              console.log(i);
+          }
+      }
+      x();
+      // o/p: 1 2 3 4 5
+
+      function x(){
+          for(let i=1; i<=5 ; i++){
+              setTimeout(function(){
+                  console.log(i);
+              },3000)
+
+          }
+          console.log("shash");
+      }
+
+      x();
+      //op: shash 6 6 6 6 6
+
+      //we get 6 because js does not wait and runs the for loop before the callback func(setTimeout) gets time to run,
+      //the i value would have become 6 and thus prints 6 , this can be avoided by using let , const will give typeerror(1 will be displayed)
+
+      //if i want to solve it using var : we will form a closures with a parameter of i
+      function x() {
+        for (var i = 1; i <= 5; i++) {
+          function closure(i) {
+            setTimeout(function () {
+              console.log(i);
+            }, 3000);
+          }
+          closure(i);
+        }
+        console.log("shash");
+      }
+
+      x();
+       // o/p: 1 2 3 4 5
+
+
+
+    </script>
+  </body>
+</html>

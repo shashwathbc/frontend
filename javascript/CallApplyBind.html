@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+         // array properties : length....
+   // array methods : map , filter , smoe , reduse ....
+
+   //array functions :  code ,name[optional(arroe n anonamous dosent have)] ,
+     properties , methods (call , apply , bind)
+
+     -->
+    <script>
+// methods of function:  methods (call , apply , bind)
+
+
+// let obj1 ={
+//     abc : "abc",
+//     def : "def",
+// }
+
+// console.log(obj1);
+
+// console.log(this);  // will give us window object (browser object model)
+
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+// using BIND method:
+// <!-- Bind method helps us to call the object inside an fuction -->
+//- Returns a modified function with 'this' reference to the bound object
+let shash ={
+    firstName : "shashwath",
+    lastName : "BC",
+    css : 3,
+    JS: 2,
+}
+
+
+    function fullname (){
+        console.log(this.firstName + ' ' + this.lastName + ' '+ this.css)
+    }
+
+    let fname = fullname.bind(shash);
+    fname();
+    //or
+    fullname.bind(shash)();
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+// using call : here it can take arguments (does not return a func)
+//arguments are specifined in an array
+//- Invoked at the time of usage
+// - Arguments separated by commas (,)
+
+
+let shash ={
+    firstName : "shashwath",
+    lastName : "BC",
+    css : 3,
+    JS: 2,
+}
+
+
+    function fullname (city , state){
+        console.log(this.firstName + ' ' + this.lastName + ' '+ city+ " "+ state)
+    }
+
+    // fullname("shsad","jdfj");
+    
+    let fname = fullname.call(shash , "sf","jskdbkfj")
+
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+// using apply:  arguments are specifined in an array
+//- Invoked at the time of usage
+// - Arguments specified in an array
+
+let shash ={
+    firstName : "shashwath",
+    lastName : "BC",
+    css : 3,
+    JS: 2,
+}
+
+
+    function fullname (city , state){
+        console.log(this.firstName + ' ' + this.lastName + ' '+ city+ " "+ state)
+    }
+
+
+fullname.apply(shash , ["dsf","sdgd"])
+
+
+
+
+//
+//With the call() method, you can write a method that can be used on different objects
+
+//With the apply() method, you can write a method that can be used on different objects.
+
+//The JavaScript Function bind() method creates a new function.
+
+
+
+
+
+    </script>
+</body>
+</html>

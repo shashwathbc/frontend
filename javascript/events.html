@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc(){
+            document.getElementById("input1").style.backgroundColor="red";
+            console.log(abc);
+        }
+    </script>
+    <!-- <style>
+        input:hover{
+            width: 500px;
+            height: 100px;
+        }
+    </style> -->
+</head>
+<body onload="abc()">
+    <input type="text" placeholder="Enter a string" onclick="abc()" id="input1">
+    <input type="text" placeholder="Enter a string" onfocus="abc()" id="input1">
+    <input type="text" placeholder="Enter a string" onblur="abc()" id="input1">
+    <input type="text" placeholder="Enter a string" onchange="abc()" id="input1">
+    <input type="text" placeholder="Enter a string" ondblclick="abc()" id="input1">
+
+    <h2>mouse events</h2>
+
+    <!-- //mouse movements: -->
+    <input type="text" placeholder="Enter a string" onmouseover="abc()" id="input1">
+    <input type="text" placeholder="Enter a string" onmouseout="abc()" id="input1">
+    <input type="text" placeholder="Enter a string" onkeydown="abc()" id="input1">
+    <input type="text" placeholder="Enter a string" onkeypress="abc()" id="input1">
+    <input type="text" placeholder="Enter a string" onkeyup="abc()" id="input1">
+    <!-- <input type="text" placeholder="Enter a string" onmousemove="abc()" id="input1">    used to find the no of pixcles the mouse moves -->
+</body>
+</html>

@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetConstVar</title>
+</head>
+<body>
+    <script>
+
+
+
+// let and const are hoisted , and are in temporel dead zone temporerly: , whereas var is in global scope 
+
+console.log(b);    //cannot access variable before inisialization (reference error)
+let b = 100;
+console.log(b);    // 100
+
+//**********************************************************************************************************************
+
+
+console.log(b);    //undefined   , memory was aloocated to b , but was not inisialized
+let a = 10;
+var b = 100;
+console.log(b);    // 100
+
+
+console.log(x);   //(syntax error) : not defined
+
+let x = 50;
+let x = 100;
+console.log(x);   // syntax error(let and const) : x is alreadty been declared 
+
+
+var x = 100;
+var x = 46;
+console.log(x);     // 46
+
+
+let x = 100;
+var x = 45;
+console.log(x);    // sntax error : already been declared 
+
+
+
+let a;
+a=10;
+console.log(a);  // 10 this same thing cannot be done in const 
+
+
+
+const a;
+a=10;
+console.log(a);   // syntax error: missing inisialixer in const declaration 
+
+
+
+
+let b = 100;
+b = 400;
+console.log(b);       //400
+
+
+
+const b = 500;
+b =300;
+console.log(b);   // typeError: assignment to constant variable
+
+
+
+
+
+//**********************************************************************************************************************
+
+
+//var can be attached with this / window object (if in global object) : window.b //op: 100
+//let and const are not in window object / this  and are in seperate space (not in global object) : window.a //op: undefined
+
+
+//**********************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

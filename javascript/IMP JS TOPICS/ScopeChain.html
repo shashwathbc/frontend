@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+      //  function a(){
+      //   console.log(b);          //10
+      //   function c(){
+      //       console.log(b);      //10
+      //   }
+      //   c();
+      //    }
+      //    var b =10;
+      //    a();
+
+//*****************************************************************************************************************
+
+      function a() {
+        var b = 10;
+        console.log(b); //10
+        function c() {
+          console.log(b); //10
+        }
+        c();
+      }
+      a();
+      console.log(b);    //not defined
+     
+//GEC - global execution context :  contains a memory and code section
+//when this prphram is run an GEC is created and pushed onto the call stack 
+
+//in the above code the c() is lexically inside a().  and a() is lexically inside global scope .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
